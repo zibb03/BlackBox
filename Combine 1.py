@@ -1,11 +1,10 @@
 # main.py
-import cv2
 import numpy as np
+import tensorflow as tf
 from keras.preprocessing.image import img_to_array
 from keras.models import load_model
-import dlib
-import random
 
+import dlib
 import cv2
 import os
 import ai
