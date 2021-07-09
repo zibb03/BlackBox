@@ -1,7 +1,7 @@
 # main.py
 import cv2
 import os
-import ai
+#import ai
 
 # 영상 처리
 def video_processing(video_path, background):
@@ -9,9 +9,6 @@ def video_processing(video_path, background):
         'models/face_mask_recognition.prototxt',
         'models/face_mask_recognition.caffemodel'
     )
-
-    #mask_detector_model = ai.create_model()
-
     cap = cv2.VideoCapture(video_path)
     fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
 
