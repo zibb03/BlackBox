@@ -21,8 +21,8 @@ net = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
 
 # 이미지 읽어오기
 #image = cv2.imread('C:/Users/user/PycharmProjects/OpenCV/People/upper body1.jpg')
-#image = cv2.imread('C:/Users/user/PycharmProjects/OpenCV/People/upper body2.jpg')
-image = cv2.imread('C:/Users/user/PycharmProjects/OpenCV/People/upper body3.jpg')
+image = cv2.imread('C:/Users/user/PycharmProjects/OpenCV/People/upper body2.jpg')
+#image = cv2.imread('C:/Users/user/PycharmProjects/OpenCV/People/upper body3.jpg')
 
 # frame.shape = 불러온 이미지에서 height, width, color 받아옴
 imageHeight, imageWidth, _ = image.shape
