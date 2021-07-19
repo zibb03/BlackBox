@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a91daa6-5a2e-414b-a3e3-136119c4806d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/blackbox.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blackbox.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/openpose_0.py" beforeDir="false" afterPath="$PROJECT_DIR$/openpose_0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combine_0.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combine_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Combine_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotion_0.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/emotion_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openpose_0.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openpose_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/output.wmv" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/output.wmv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +38,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/anaconda3/envs/BlackBox-env" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.gui">
+  <component name="RunManager" selected="Python.Combine_2">
     <configuration name="Combine_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -53,7 +63,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="emotion_0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Combine_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -65,7 +75,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/emotion_0.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Combine_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -74,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="emotion_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="PoseNet" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -86,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/emotion_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PoseNet.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -95,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="face_recognition_0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="openpose_0" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/face_recognition_0.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/openpose_0.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -116,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="gui" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="openpose_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -128,7 +138,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gui.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/openpose_2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.gui" />
-        <item itemvalue="Python.emotion_1" />
-        <item itemvalue="Python.emotion_0" />
+        <item itemvalue="Python.Combine_2" />
         <item itemvalue="Python.Combine_1" />
-        <item itemvalue="Python.face_recognition_0" />
+        <item itemvalue="Python.PoseNet" />
+        <item itemvalue="Python.openpose_2" />
+        <item itemvalue="Python.openpose_0" />
       </list>
     </recent_temporary>
   </component>
@@ -165,34 +175,43 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="658" y="152" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1625898189272" />
-    <state x="689" y="217" key="FileChooserDialogImpl" timestamp="1625646996673">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2609" y="222" key="FileChooserDialogImpl" timestamp="1626195803419">
+      <screen x="1920" y="5" width="1920" height="1040" />
     </state>
+    <state x="2609" y="222" key="FileChooserDialogImpl/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626195803419" />
     <state x="689" y="217" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1625646996673" />
-    <state width="1893" height="332" key="GridCell.Tab.0.bottom" timestamp="1625909566237">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1893" height="202" key="GridCell.Tab.0.bottom" timestamp="1626706403988">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1625909566237" />
-    <state width="1893" height="212" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1625680501014" />
-    <state width="1893" height="332" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1625898576294" />
-    <state width="1893" height="332" key="GridCell.Tab.0.center" timestamp="1625909566237">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626536443623" />
+    <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626706403988" />
+    <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
+    <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
+    <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626699426782" />
+    <state width="1893" height="202" key="GridCell.Tab.0.center" timestamp="1626706403988">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="332" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1625909566237" />
-    <state width="1893" height="212" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1625680501014" />
-    <state width="1893" height="332" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1625898576294" />
-    <state width="1893" height="332" key="GridCell.Tab.0.left" timestamp="1625909566237">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626536443623" />
+    <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626706403988" />
+    <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
+    <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
+    <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626699426782" />
+    <state width="1893" height="202" key="GridCell.Tab.0.left" timestamp="1626706403987">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="332" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1625909566237" />
-    <state width="1893" height="212" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1625680501014" />
-    <state width="1893" height="332" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1625898576294" />
-    <state width="1893" height="332" key="GridCell.Tab.0.right" timestamp="1625909566237">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626536443623" />
+    <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626706403987" />
+    <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
+    <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
+    <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626699426782" />
+    <state width="1893" height="202" key="GridCell.Tab.0.right" timestamp="1626706403988">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="332" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1625909566237" />
-    <state width="1893" height="212" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1625680501014" />
-    <state width="1893" height="332" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1625898576294" />
+    <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626536443623" />
+    <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626706403988" />
+    <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
+    <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
+    <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626699426782" />
     <state width="1893" height="332" key="GridCell.Tab.1.bottom" timestamp="1625909566237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -213,10 +232,14 @@
     </state>
     <state width="1893" height="332" key="GridCell.Tab.1.right/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1625909566237" />
     <state width="1893" height="332" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1625898576294" />
-    <state x="626" y="117" key="SettingsEditor" timestamp="1625897816127">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2546" y="117" key="SettingsEditor" timestamp="1626529282206">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="626" y="117" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1625897816127" />
+    <state x="626" y="117" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1626529118689" />
+    <state x="2546" y="117" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626529282206" />
+    <state x="326" y="73" key="SettingsEditor/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272715718" />
+    <state x="2585" y="54" key="SettingsEditor/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196288118" />
+    <state x="626" y="117" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626419041732" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1625898162467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -233,11 +256,6 @@
           <url>file://$PROJECT_DIR$/ai.py</url>
           <line>1</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$USER_HOME$/anaconda3/envs/blackbox/Lib/site-packages/tensorflow/python/keras/preprocessing/image.py</url>
-          <line>220</line>
-          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
