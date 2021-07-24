@@ -27,8 +27,8 @@ net = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
 # 영상 처리
 def video_processing(video_path, background):
     face_mask_recognition_model = cv2.dnn.readNet(
-        'models/face_mask_recognition.prototxt',
-        'models/face_mask_recognition.caffemodel'
+        'C:/Users/user/Documents/GitHub/blackbox/models/face_mask_recognition.prototxt',
+        'C:/Users/user/Documents/GitHub/blackbox/models/face_mask_recognition.caffemodel'
     )
 
     cap = cv2.VideoCapture(video_path)
@@ -177,5 +177,5 @@ def video_processing(video_path, background):
 if __name__ == '__main__':
     #print(weightsFile.summary())
     #video_processing('C:/Users/user/PycharmProjects/OpenCV/doc/watershed_TestVideo/success_3.mp4', False)
-    #video_processing('data/04.mp4', False)
-    video_processing('data/dog.mp4', False)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/04.mp4', False)
+    #video_processing('data/dog.mp4', False)

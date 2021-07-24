@@ -6,8 +6,8 @@ import ai
 # 영상 처리
 def video_processing(video_path, background):
     face_mask_recognition_model = cv2.dnn.readNet(
-        'models/face_mask_recognition.prototxt',
-        'models/face_mask_recognition.caffemodel'
+        'C:/Users/user/Documents/GitHub/blackbox/models/face_mask_recognition.prototxt',
+        'C:/Users/user/Documents/GitHub/blackbox/models/face_mask_recognition.caffemodel'
     )
 
     mask_detector_model = ai.create_model()
@@ -77,7 +77,7 @@ def video_processing(video_path, background):
 
         if out is None:
             out = cv2.VideoWriter(
-                'outputs/output.wmv',
+                'C:/Users/user/Documents/GitHub/blackbox/outputs/output.wmv',
                 fourcc,
                 cap.get(cv2.CAP_PROP_FPS),
                 (image.shape[1], image.shape[0])
@@ -99,4 +99,4 @@ def video_processing(video_path, background):
 
 
 if __name__ == '__main__':
-    video_processing('data/04.mp4', False)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/04.mp4', False)
