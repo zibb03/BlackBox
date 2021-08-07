@@ -4,7 +4,8 @@
 import cv2
 import os
 import math
-import face_recognition
+import time
+# import face_recognition
 from PIL import Image, ImageDraw
 
 BODY_PARTS_BODY_25 = {0: "Nose", 1: "Neck", 2: "RShoulder", 3: "RElbow", 4: "RWrist",
@@ -39,9 +40,11 @@ def output_keypoints(image, proto_file, weights_file, threshold, BODY_PARTS):
 
     # 전처리된 blob 네트워크에 입력
     net.setInput(input_blob)
+    st = time.time()
 
     # 결과 받아오기
     out = net.forward()
+    print('net ed : ', time.time() - st)
     # The output is a 4D matrix :
     # The first dimension being the image ID ( in case you pass more than one image to the network ).
     # The second dimension indicates the index of a keypoint.
@@ -83,35 +86,68 @@ def output_keypoints(image, proto_file, weights_file, threshold, BODY_PARTS):
 
     return image
 
-
 def output_keypoints_with_lines(POSE_PAIRS, frame):
     # 프레임 복사
     frame_line = frame.copy()
+    deg = 0
 
-    # RElbow 과 RWrist 의 좌표값이 존재한다면
-    if (points[3] is not None) and (points[4] is not None):
-        calculate_degree1(point_1=points[3], point_2=points[4], frame=frame_line)
-
-    # LElbow 과 LWrist 의 좌표값이 존재한다면
-    if (points[5] is not None) and (points[6] is not None):
-        calculate_degree2(point_1=points[5], point_2=points[6], frame=frame_line)
+    # # Neck 과 MidHeap 의 좌표값이 존재한다면
+    # if (points[1] is not None) and (points[8] is not None):
+    #     calculate_degree(point_1=points[1], point_2=points[8], frame=frame_line)
 
     for pair in POSE_PAIRS:
         part_a = pair[0]  # 0 (Head)
         part_b = pair[1]  # 1 (Neck)
         if points[part_a] and points[part_b]:
-            print(f"[linked] {part_a} {points[part_a]} <=> {part_b} {points[part_b]}")
+            # print(f"[linked] {part_a} {points[part_a]} <=> {part_b} {points[part_b]}")
             # Neck 과 MidHip 이라면 분홍색 선
             if part_a == 1 and part_b == 8:
                 cv2.line(frame, points[part_a], points[part_b], (255, 0, 255), 3)
+            elif part_a == 2 and part_b == 3:
+                deg = calculate_degree(point_1=points[part_a], point_2=points[part_b], frame=frame_line)
+                if deg < 25:
+                    print("deg:", deg)
+                    cv2.line(frame, points[part_a], points[part_b], (255, 0, 255), 3)
+                else:
+                    cv2.line(frame, points[part_a], points[part_b], (0, 255, 0), 3)
+            elif part_a == 3 and part_b == 4:
+                deg = calculate_degree(point_1=points[part_a], point_2=points[part_b], frame=frame_line)
+                #if 25 < deg < 60:
+                if deg > 50:
+                    print("deg:", deg)
+                    cv2.line(frame, points[part_a], points[part_b], (255, 0, 255), 3)
+                else:
+                    cv2.line(frame, points[part_a], points[part_b], (0, 255, 0), 3)
+            elif part_a == 5 and part_b == 6:
+                deg = calculate_degree(point_1=points[part_a], point_2=points[part_b], frame=frame_line)
+                if deg < 25:
+                    print("deg:", deg)
+                    cv2.line(frame, points[part_a], points[part_b], (255, 0, 255), 3)
+                else:
+                    cv2.line(frame, points[part_a], points[part_b], (0, 255, 0), 3)
+            elif part_a == 6 and part_b == 7:
+                deg = calculate_degree(point_1=points[part_a], point_2=points[part_b], frame=frame_line)
+                #if 25 < deg < 60:
+                if deg > 50:
+                    print("deg:", deg)
+                    cv2.line(frame, points[part_a], points[part_b], (255, 0, 255), 3)
+                else:
+                    cv2.line(frame, points[part_a], points[part_b], (0, 255, 0), 3)
             else:  # 노란색 선
                 cv2.line(frame, points[part_a], points[part_b], (0, 255, 0), 3)
         else:
             print(f"[not linked] {part_a} {points[part_a]} <=> {part_b} {points[part_b]}")
 
+    # 포인팅 되어있는 프레임과 라인까지 연결된 프레임을 가로로 연결
+    #frame_horizontal = cv2.hconcat([frame, frame_line])
+    #cv2.imshow("Output_Keypoints_With_Lines", frame_horizontal)
+    #cv2.imshow("Output_Keypoints_With_Lines", frame)
+    #cv2.waitKey(0)
+    #cv2.destroyAllWindows()
+    #print(type(frame_line))
     return frame_line
 
-def calculate_degree1(point_1, point_2, frame):
+def calculate_degree(point_1, point_2, frame):
     # 역탄젠트 구하기
     dx = point_2[0] - point_1[0]
     dy = point_2[1] - point_1[1]
@@ -119,38 +155,17 @@ def calculate_degree1(point_1, point_2, frame):
 
     # radian 을 degree 로 변환
     deg = rad * 180 / math.pi
+    return deg
 
     # degree 가 45'보다 작으면 허리가 숙여졌다고 판단
-    if deg < 45:
-        # string = "Bend Down"
-        # cv2.putText(frame, string, (0, 25), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 255))
-        # print(f"[degree] {deg} ({string})")
-        cv2.line(frame, points[3], points[4], (255, 0, 0), 3)
+    # if deg < 45:
+    #     string = "Bend Down"
+    #     cv2.putText(frame, string, (0, 25), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 255))
+    #     print(f"[degree] {deg} ({string})")
     # else:
     #     string = "Stand"
     #     cv2.putText(frame, string, (0, 25), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 255))
     #     print(f"[degree] {deg} ({string})")
-
-def calculate_degree2(point_1, point_2, frame):
-    # 역탄젠트 구하기
-    dx = point_2[0] - point_1[0]
-    dy = point_2[1] - point_1[1]
-    rad = math.atan2(abs(dy), abs(dx))
-
-    # radian 을 degree 로 변환
-    deg = rad * 180 / math.pi
-
-    # degree 가 45'보다 작으면 허리가 숙여졌다고 판단
-    if deg < 45:
-        # string = "Bend Down"
-        # cv2.putText(frame, string, (0, 25), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 255))
-        # print(f"[degree] {deg} ({string})")
-        cv2.line(frame, points[5], points[6], (255, 0, 0), 3)
-    # else:
-    #     string = "Stand"
-    #     cv2.putText(frame, string, (0, 25), cv2.FONT_HERSHEY_DUPLEX, 1, (255, 0, 255))
-    #     print(f"[degree] {deg} ({string})")
-
 
 
 # 영상 처리
@@ -175,27 +190,27 @@ def video_processing(video_path, background):
         if not ret:
             break
 
-        face_locations = face_recognition.face_locations(image)
-
-        face_image = Image.fromarray(image)
-        draw = ImageDraw.Draw(face_image)
+        # face_locations = face_recognition.face_locations(image)
+        #
+        # face_image = Image.fromarray(image)
+        # draw = ImageDraw.Draw(face_image)
 
         result_image = image.copy()
 
-        for face_location in face_locations:
-            top = face_location[0]
-            right = face_location[1]
-            bottom = face_location[2]
-            left = face_location[3]
-
-            cv2.rectangle(
-                result_image,
-                pt1=(left, top),
-                pt2=(right, bottom),
-                thickness=2,
-                color=colors[0],
-                lineType=cv2.LINE_AA
-            )
+        # for face_location in face_locations:
+        #     top = face_location[0]
+        #     right = face_location[1]
+        #     bottom = face_location[2]
+        #     left = face_location[3]
+        #
+        #     cv2.rectangle(
+        #         result_image,
+        #         pt1=(left, top),
+        #         pt2=(right, bottom),
+        #         thickness=2,
+        #         color=colors[0],
+        #         lineType=cv2.LINE_AA
+        #     )
 
         points = []
 
@@ -207,7 +222,7 @@ def video_processing(video_path, background):
 
         if out is None:
             out = cv2.VideoWriter(
-                'C:/Users/user/Documents/GitHub/blackbox/outputs/output test.wmv',
+                'C:/Users/user/Documents/GitHub/blackbox/outputs/06.wmv',
                 fourcc,
                 cap.get(cv2.CAP_PROP_FPS),
                 # (image_frame.shape[1], image_frame.shape[0])
@@ -230,6 +245,6 @@ def video_processing(video_path, background):
 
 
 if __name__ == '__main__':
-    video_processing('C:/Users/user/PycharmProjects/OpenCV/doc/watershed_TestVideo/success_1.mp4', False)
-    #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/05.mp4', False)
+    #video_processing('C:/Users/user/PycharmProjects/OpenCV/doc/watershed_TestVideo/success_1.mp4', False)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/06.mp4', False)
     #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/model4.mp4', False)

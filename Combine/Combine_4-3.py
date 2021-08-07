@@ -1,9 +1,14 @@
 # PoseNet만 사용하는 코드
 # 멘토님이 수정해주신 코드
 
+import os
+#os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
+
 # main.py
 import cv2
-import os, time
+import time
 #import math
 #import face_recognition
 #from PIL import Image, ImageDraw
@@ -24,13 +29,16 @@ protoFile_body_25 = "C:/Users/user/Documents/GitHub/blackbox/models/pose_deploy.
 # 훈련된 모델의 weight 를 저장하는 caffemodel 파일
 weightsFile_body_25 = "C:/Users/user/Documents/GitHub/blackbox/models/pose_iter_584000.caffemodel"
 
+
 def output_keypoints(image, threshold, BODY_PARTS, net):
     global points
     # 네트워크 불러오기
     #net = cv2.dnn.readNetFromCaffe(proto_file, weights_file)
     # 입력 이미지의 사이즈 정의
-    image_height = 368
-    image_width = 368
+    image_height = 246
+    # 368
+    image_width = 246
+    # 368
 
     # 네트워크에 넣기 위한 전처리
     input_blob = cv2.dnn.blobFromImage(image, 1.0 / 255, (image_width, image_height), (0, 0, 0), swapRB=False,
@@ -47,7 +55,7 @@ def output_keypoints(image, threshold, BODY_PARTS, net):
     # The first dimension being the image ID ( in case you pass more than one image to the network ).
     # The second dimension indicates the index of a keypoint.
     # The model produces Confidence Maps and Part Affinity maps which are all concatenated.
-    # For COCO model it consists of 57 parts – 18 keypoint confidence Maps + 1 background + 19*2 Part Affinity Maps. Similarly, for MPI, it produces 44 points.
+    # For COCO model it consists of 57 parts – 18 keypoint confvkdlcvkidence Maps + 1 background + 19*2 Part Affinity Maps. Similarly, for MPI, it produces 44 points.
     # We will be using only the first few points which correspond to Keypoints.
     # The third dimension is the height of the output map.
     out_height = out.shape[2]

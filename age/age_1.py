@@ -3,7 +3,6 @@
 # main.py
 import cv2
 import os
-import ai
 
 # 영상 처리
 def video_processing(video_path, background):
@@ -120,4 +119,6 @@ def video_processing(video_path, background):
 
 
 if __name__ == '__main__':
-    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/baby2.mp4', False)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/baby3.mp4', False)
+    #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/04.mp4', False)
+
