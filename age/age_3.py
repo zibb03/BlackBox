@@ -2,6 +2,7 @@
 
 import cv2
 import pyaudio
+from PIL import ImageFont, ImageDraw, Image
 import numpy as np
 
 MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
@@ -62,8 +63,19 @@ while True:
         # face_image = cv2.resize(face_image, dsize=(224, 224))
         # face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
 
-        face = result_image[int(top):int(top + bottom - top), int(left):int(left + bottom - top)].copy()
-        blob2 = cv2.dnn.blobFromImage(face, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
+        if right >= width or top >= right or left >= height or left >= bottom or right < 0 or left < 0 or bottom < 0 or top < 0:
+            fontpath = "font/gulim.ttc"
+            font = ImageFont.truetype(fontpath, 20)
+            img_pil = Image.fromarray(result_image)
+            draw = ImageDraw.Draw(img_pil)
+            # fill = rgb 색상
+            draw.text((50, 100), "화면 안쪽으로 들어와주세요.", font=font, fill=(255, 0, 0, 128))
+            result_image = np.array(img_pil)
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            # cv2.putText(result_image, text, (50,100), font, 1, (255, 0, 0), 2)
+        else:
+            face = result_image[int(top):int(top + bottom - top), int(left):int(left + bottom - top)].copy()
+            blob2 = cv2.dnn.blobFromImage(face, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
 
         # Predict age
         age_net.setInput(blob2)

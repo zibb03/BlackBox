@@ -3,6 +3,8 @@
 # main.py
 import cv2
 import os
+from PIL import ImageFont, ImageDraw, Image
+import numpy as np
 
 # 영상 처리
 def video_processing(video_path, background):
@@ -59,14 +61,25 @@ def video_processing(video_path, background):
             right = int(face_locations[0, 0, i, 5] * width)
             bottom = int(face_locations[0, 0, i, 6] * height)
 
-            face_image = image[top:bottom, left:right]
-            face_image = cv2.resize(face_image, dsize=(224, 224))
-            face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
+            #face_image = image[top:bottom, left:right]
+            #face_image = cv2.resize(face_image, dsize=(224, 224))
+            #face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
 
             #predict = ai.predict(mask_detector_model, face_image)
 
-            face = result_image[int(top):int(top + bottom - top), int(left):int(left + bottom - top)].copy()
-            blob2 = cv2.dnn.blobFromImage(face, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
+            if right >= width or top >= right or left >= height or left >= bottom or right < 0 or left < 0 or bottom < 0 or top < 0:
+                fontpath = "font/gulim.ttc"
+                font = ImageFont.truetype(fontpath, 20)
+                img_pil = Image.fromarray(result_image)
+                draw = ImageDraw.Draw(img_pil)
+                # fill = rgb 색상
+                draw.text((50, 100), "화면 안쪽으로 들어와주세요.", font=font, fill=(255, 0, 0, 128))
+                result_image = np.array(img_pil)
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                # cv2.putText(result_image, text, (50,100), font, 1, (255, 0, 0), 2)
+            else:
+                face = result_image[int(top):int(top + bottom - top), int(left):int(left + bottom - top)].copy()
+                blob2 = cv2.dnn.blobFromImage(face, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
 
             # Predict age
             age_net.setInput(blob2)
@@ -119,6 +132,6 @@ def video_processing(video_path, background):
 
 
 if __name__ == '__main__':
-    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/baby3.mp4', False)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/test1.mp4', False)
     #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/04.mp4', False)
 
