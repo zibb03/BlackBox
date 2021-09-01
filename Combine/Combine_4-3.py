@@ -209,6 +209,6 @@ def video_processing(video_path, background, net):
 
 if __name__ == '__main__':
     net = cv2.dnn.readNetFromCaffe(protoFile_body_25, weightsFile_body_25)
-    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/model3.mp4', False, net)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/test2.mp4', False, net)
     #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/05.mp4', False)
     #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/model4.mp4', False)

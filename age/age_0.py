@@ -103,7 +103,7 @@ age_list = ['(0 ~ 2)', '(4 ~ 6)', '(8 ~ 12)', '(15 ~ 20)',
 gender_list = ['Male', 'Female']
 
 # 영상 파일
-cam = cv2.VideoCapture('C:/Users/user/Documents/GitHub/blackbox/data/baby1.mp4')
+cam = cv2.VideoCapture('C:/Users/user/Documents/GitHub/blackbox/data/test2.mp4')
 # 이미지 파일
 #img = cv2.imread('sample.jpg')
 

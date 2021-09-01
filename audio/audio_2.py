@@ -14,6 +14,7 @@ while (True):
     data = np.fromstring(stream.read(CHUNK), dtype=np.int16)
     print(int(np.average(np.abs(data))))
 
+
 stream.stop_stream()
 stream.close()
 p.terminate()

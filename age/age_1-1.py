@@ -168,6 +168,5 @@ def video_processing(video_path, background):
 
 
 if __name__ == '__main__':
-    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/test1.mp4', False)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/test2-1.mp4', False)
     #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/04.mp4', False)
-

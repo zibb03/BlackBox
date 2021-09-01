@@ -5,6 +5,8 @@ import pyaudio
 from PIL import ImageFont, ImageDraw, Image
 import numpy as np
 
+from threading import Thread
+
 MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
 
 age_net = cv2.dnn.readNetFromCaffe(
@@ -19,21 +21,35 @@ face_mask_recognition_model = cv2.dnn.readNet(
 age_list = ['(0 ~ 2)', '(4 ~ 6)', '(8 ~ 12)', '(15 ~ 20)',
             '(25 ~ 32)', '(38 ~ 43)', '(48 ~ 53)', '(60 ~ 100)']
 
-video_capture = cv2.VideoCapture(0)
+def work(id, result):
+    print(1)
+    data = np.fromstring(stream.read(CHUNK), dtype=np.int16)
+    result = int(np.average(np.abs(data)))
+    print(int(np.average(np.abs(data))))
+    return
 
 face_locations = []
 process_this_frame = True
 
-# CHUNK = 2 ** 10
-# RATE = 44100
-#
-# p = pyaudio.PyAudio()
-# stream = p.open(format=pyaudio.paInt16, channels=1, rate=RATE, input=True,
-#                 frames_per_buffer=CHUNK, input_device_index=2)
+CHUNK = 2 ** 10
+RATE = 44100
+
+video_capture = cv2.VideoCapture(0)
+
+p = pyaudio.PyAudio()
+stream = p.open(format=pyaudio.paInt16, channels=1, rate=RATE, input=True,
+                frames_per_buffer=CHUNK, input_device_index=2)
 
 while True:
     # Grab a single frame of video
     ret, frame = video_capture.read()
+
+    result = 0
+    th1 = Thread(target=work, args=(1, result))
+
+    th1.start()
+    th1.join()
+    #print(result)
 
     # Only process every other frame of video to save time
     if process_this_frame:
@@ -45,9 +61,6 @@ while True:
 
     height, width = frame.shape[:2]
     result_image = frame.copy()
-
-    # data = np.fromstring(stream.read(CHUNK), dtype=np.int16)
-    # print(int(np.average(np.abs(data))))
 
     for i in range(face_locations.shape[2]):
         confidence = face_locations[0, 0, i, 2]
@@ -103,9 +116,9 @@ while True:
             thickness=2,
             lineType=cv2.LINE_AA
         )
-    # stream.stop_stream()
-    # stream.close()
-    # p.terminate()
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
 
 
     # Display the resulting image

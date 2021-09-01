@@ -80,6 +80,7 @@ def video_processing(video_path, background):
             else:
                 face = result_image[int(top):int(top + bottom - top), int(left):int(left + bottom - top)].copy()
                 blob2 = cv2.dnn.blobFromImage(face, 1, (227, 227), MODEL_MEAN_VALUES, swapRB=False)
+                print(type(blob2))
 
             # Predict age
             age_net.setInput(blob2)
@@ -132,6 +133,6 @@ def video_processing(video_path, background):
 
 
 if __name__ == '__main__':
-    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/test1.mp4', False)
+    video_processing('C:/Users/user/Documents/GitHub/blackbox/data/baby1.mp4', False)
     #video_processing('C:/Users/user/Documents/GitHub/blackbox/data/04.mp4', False)
 
