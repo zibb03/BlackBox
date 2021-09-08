@@ -3,18 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2a91daa6-5a2e-414b-a3e3-136119c4806d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Combine/Combine_4-3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Combine/Combine_4-3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/age/age_0.py" beforeDir="false" afterPath="$PROJECT_DIR$/age/age_0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/age/age_1-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/age/age_1-1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/age/age_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/age/age_1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/age/age_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/age/age_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/audio_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/audio/audio_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/audio/output.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio/output.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/baby3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/output test.wmv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/output.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/output4.wmv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputs/output_test.wmv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/decoding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/encoding.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +35,8 @@
     <property name="last_opened_file_path" value="$USER_HOME$/anaconda3/envs/BlackBox-env" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.encoding">
-    <configuration name="age_1-2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="Client_Script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -52,11 +44,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/age" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Socket" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/age/age_1-2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Socket/Client_Script.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -65,7 +57,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="age_2-2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Server_Script" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,11 +65,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/age" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Socket" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/age/age_2-2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Socket/Server_Script.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="age_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Server_Script_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,11 +86,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/age" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Socket" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/age/age_3.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Socket/Server_Script_1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -107,7 +99,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="encoding" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Server_Script_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="blackbox" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Socket" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Socket/Server_Script_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,28 +132,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/encoding.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="video&amp;audio-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="blackbox" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/audio" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/audio/video&amp;audio-1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.encoding" />
-        <item itemvalue="Python.video&amp;audio-1" />
-        <item itemvalue="Python.age_1-2" />
-        <item itemvalue="Python.age_2-2" />
-        <item itemvalue="Python.age_3" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.Server_Script_2" />
+        <item itemvalue="Python.Server_Script_1" />
+        <item itemvalue="Python.Client_Script" />
+        <item itemvalue="Python.Server_Script" />
       </list>
     </recent_temporary>
   </component>
@@ -184,38 +176,38 @@
     <state x="2609" y="217" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626717948915" />
     <state x="2609" y="222" key="FileChooserDialogImpl/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626195803419" />
     <state x="689" y="217" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1628503633490" />
-    <state width="1893" height="235" key="GridCell.Tab.0.bottom" timestamp="1630490176028">
+    <state width="1893" height="235" key="GridCell.Tab.0.bottom" timestamp="1631098514750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629614569626" />
     <state width="1893" height="236" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629155685777" />
     <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1630490176028" />
-    <state width="1893" height="235" key="GridCell.Tab.0.center" timestamp="1630490176028">
+    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631098514750" />
+    <state width="1893" height="235" key="GridCell.Tab.0.center" timestamp="1631098514749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629614569625" />
     <state width="1893" height="236" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629155685777" />
     <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1630490176028" />
-    <state width="1893" height="235" key="GridCell.Tab.0.left" timestamp="1630490176026">
+    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631098514749" />
+    <state width="1893" height="235" key="GridCell.Tab.0.left" timestamp="1631098514749">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629614569625" />
     <state width="1893" height="236" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629155685777" />
     <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1630490176026" />
-    <state width="1893" height="235" key="GridCell.Tab.0.right" timestamp="1630490176028">
+    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631098514749" />
+    <state width="1893" height="235" key="GridCell.Tab.0.right" timestamp="1631098514750">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629614569626" />
     <state width="1893" height="236" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629155685777" />
     <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1630490176028" />
+    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631098514750" />
     <state width="1893" height="332" key="GridCell.Tab.1.bottom" timestamp="1625909566237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -252,12 +244,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="709" y="137" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628171843257" />
-    <state x="-7" y="0" width="974" height="1047" key="dock-window-1" timestamp="1630316998705">
+    <state x="-7" y="0" width="974" height="1047" key="dock-window-1" timestamp="1631063308933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="648" y="348" width="1671" height="701" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628268603668" />
     <state x="244" y="-32" width="1674" height="1018" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1629155657113" />
-    <state x="-7" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1630316998705" />
+    <state x="-7" y="0" width="974" height="1047" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1631063308933" />
     <state x="-7" y="0" width="974" height="1047" key="dock-window-2" timestamp="1629886856312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -268,11 +260,11 @@
     </state>
     <state x="89" y="-30" width="1671" height="701" key="dock-window-3/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1628274992796" />
     <state x="559" y="281" width="1671" height="701" key="dock-window-3/0.0.1920.1040@0.0.1920.1040" timestamp="1628276055973" />
-    <state x="572" y="11" width="775" height="1017" key="find.popup" timestamp="1630317597435">
+    <state x="572" y="11" width="775" height="1017" key="find.popup" timestamp="1630548456933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="2492" y="11" width="775" height="1017" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1627093956915" />
-    <state x="572" y="11" width="775" height="1017" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1630317597435" />
+    <state x="572" y="11" width="775" height="1017" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1630548456933" />
     <state x="539" y="5" key="search.everywhere.popup" timestamp="1625490225273">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

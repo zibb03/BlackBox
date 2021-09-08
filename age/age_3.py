@@ -1,11 +1,13 @@
 # 실시간 웹캠 처리 코드
+# 온도 센서 사용
 
 import cv2
-import pyaudio
 from PIL import ImageFont, ImageDraw, Image
 import numpy as np
 
-from threading import Thread
+import time
+import board
+import adafruit_dht
 
 MODEL_MEAN_VALUES = (78.4263377603, 87.7689143744, 114.895847746)
 
@@ -20,36 +22,35 @@ face_mask_recognition_model = cv2.dnn.readNet(
 
 age_list = ['(0 ~ 2)', '(4 ~ 6)', '(8 ~ 12)', '(15 ~ 20)',
             '(25 ~ 32)', '(38 ~ 43)', '(48 ~ 53)', '(60 ~ 100)']
+colors = [(0, 255, 0), (0, 0, 255)]
 
-def work(id, result):
-    print(1)
-    data = np.fromstring(stream.read(CHUNK), dtype=np.int16)
-    result = int(np.average(np.abs(data)))
-    print(int(np.average(np.abs(data))))
-    return
+video_capture = cv2.VideoCapture(0)
+dhtDevice = adafruit_dht.DHT11(board.D4)
 
 face_locations = []
 process_this_frame = True
 
-CHUNK = 2 ** 10
-RATE = 44100
-
-video_capture = cv2.VideoCapture(0)
-
-p = pyaudio.PyAudio()
-stream = p.open(format=pyaudio.paInt16, channels=1, rate=RATE, input=True,
-                frames_per_buffer=CHUNK, input_device_index=2)
-
 while True:
     # Grab a single frame of video
     ret, frame = video_capture.read()
+    dht = True
 
-    result = 0
-    th1 = Thread(target=work, args=(1, result))
+    while dht:
+        try:
+            temperature_c = dhtDevice.temperature
+            if temperature_c is not None:
+                dht = False
 
-    th1.start()
-    th1.join()
-    #print(result)
+        except RuntimeError as error:
+            # Errors happen fairly often, DHT's are hard to read, just keep going
+            print(error.args[0])
+            time.sleep(2.0)
+            continue
+        except Exception as error:
+            dhtDevice.exit()
+            raise error
+
+        time.sleep(2.0)
 
     # Only process every other frame of video to save time
     if process_this_frame:
@@ -61,8 +62,10 @@ while True:
 
     height, width = frame.shape[:2]
     result_image = frame.copy()
+    cnt = 0
 
     for i in range(face_locations.shape[2]):
+        cnt += 1
         confidence = face_locations[0, 0, i, 2]
         if confidence < 0.5:
             continue
@@ -75,8 +78,20 @@ while True:
         # face_image = rgb_small_frame[top:bottom, left:right]
         # face_image = cv2.resize(face_image, dsize=(224, 224))
         # face_image = cv2.cvtColor(face_image, cv2.COLOR_BGR2RGB)
+        cv2.rectangle(result_image, pt1=(width - 170, 45), pt2=(width - 55, 105), color=(255, 255, 255), thickness=-1,
+                      lineType=cv2.LINE_AA)
+
+        if temperature_c <= 30:
+            # BGR
+            cv2.putText(result_image, temperature_c, (width - 160, 55), font, 1, (0, 128, 0), 2)
+        else:
+            cv2.putText(result_image, temperature_c, (width - 160, 55), font, 1, (0, 0, 255), 2)
 
         if right >= width or top >= right or left >= height or left >= bottom or right < 0 or left < 0 or bottom < 0 or top < 0:
+            # rectangle(img, pt1, pt2, color, thickness=None, lineType=None, shift=None):
+            cv2.rectangle(result_image, pt1=(40, 90), pt2=(360, 130), color=(255, 255, 255), thickness=-1,
+                          lineType=cv2.LINE_AA)
+
             fontpath = "font/gulim.ttc"
             font = ImageFont.truetype(fontpath, 20)
             img_pil = Image.fromarray(result_image)
@@ -97,29 +112,53 @@ while True:
 
         info = age_list[age]
 
-        cv2.rectangle(
-            result_image,
-            pt1=(left, top),
-            pt2=(right, bottom),
-            thickness=2,
-            color=(0, 255, 0),
-            lineType=cv2.LINE_AA
-        )
-        # cv2.putText(result_image, info, (left, right - 15), 0, 0.5, (0, 255, 0), 1)
-        cv2.putText(
-            result_image,
-            age_list[age],
-            org=(left, top - 10),
-            fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-            fontScale=0.8,
-            color=(0, 255, 0),
-            thickness=2,
-            lineType=cv2.LINE_AA
-        )
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
+        if cnt == 1:
+            # print(age_list[age])
+            if age_list[age] == '(0 ~ 2)':
+                cv2.rectangle(result_image, pt1=(left, top), pt2=(right, bottom), thickness=2, color=colors[1],
+                              lineType=cv2.LINE_AA)
+                cv2.putText(result_image, age_list[age], org=(left, top - 10), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+                            fontScale=0.8, color=colors[1], thickness=2, lineType=cv2.LINE_AA)
+                # rectangle(img, pt1, pt2, color, thickness=None, lineType=None, shift=None):
+                cv2.rectangle(result_image, pt1=(40, 45), pt2=(360, 90), color=(255, 255, 255), thickness=-1,
+                              lineType=cv2.LINE_AA)
 
+                fontpath = "font/gulim.ttc"
+                font = ImageFont.truetype(fontpath, 20)
+                img_pil = Image.fromarray(result_image)
+                draw = ImageDraw.Draw(img_pil)
+                # fill = rgb 색상
+                draw.text((50, 55), "위험! 아이가 혼자 차에 있습니다.", font=font, fill=(0, 0, 255, 128))
+                result_image = np.array(img_pil)
+
+            elif age_list[age] == '(4 ~ 6)':
+                cv2.rectangle(result_image, pt1=(left, top), pt2=(right, bottom), thickness=2, color=colors[1],
+                              lineType=cv2.LINE_AA)
+                cv2.putText(result_image, age_list[age], org=(left, top - 10), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+                            fontScale=0.8, color=colors[1], thickness=2, lineType=cv2.LINE_AA)
+                # rectangle(img, pt1, pt2, color, thickness=None, lineType=None, shift=None):
+                cv2.rectangle(result_image, pt1=(40, 45), pt2=(360, 90), color=(255, 255, 255), thickness=-1,
+                              lineType=cv2.LINE_AA)
+
+                fontpath = "font/gulim.ttc"
+                font = ImageFont.truetype(fontpath, 20)
+                img_pil = Image.fromarray(result_image)
+                draw = ImageDraw.Draw(img_pil)
+                # fill = rgb 색상
+                draw.text((50, 55), "위험! 아이가 혼자 차에 있습니다.", font=font, fill=(0, 0, 255, 128))
+                result_image = np.array(img_pil)
+
+            else:
+                cv2.rectangle(result_image, pt1=(left, top), pt2=(right, bottom), thickness=2, color=colors[0],
+                              lineType=cv2.LINE_AA)
+                cv2.putText(result_image, age_list[age], org=(left, top - 10), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+                            fontScale=0.8, color=colors[0], thickness=2, lineType=cv2.LINE_AA)
+
+        else:
+            cv2.rectangle(result_image, pt1=(left, top), pt2=(right, bottom), thickness=2, color=colors[0],
+                          lineType=cv2.LINE_AA)
+            cv2.putText(result_image, age_list[age], org=(left, top - 10), fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+                        fontScale=0.8, color=colors[0], thickness=2, lineType=cv2.LINE_AA)
 
     # Display the resulting image
     #cv2.imshow('Video', frame)
