@@ -57,15 +57,16 @@ while True:
 
         if right >= width or top >= right or left >= height or left >= bottom or right < 0 or left < 0 or bottom < 0 or top < 0:
             # rectangle(img, pt1, pt2, color, thickness=None, lineType=None, shift=None):
-            cv2.rectangle(result_image, pt1=(40, 90), pt2=(360, 130), color=(255, 255, 255), thickness=-1,
-                          lineType=cv2.LINE_AA)
+            # cv2.rectangle(result_image, pt1=(40, 90), pt2=(360, 130), color=(255, 255, 255), thickness=-1,
+                          # lineType=cv2.LINE_AA)
 
             fontpath = "font/gulim.ttc"
             font = ImageFont.truetype(fontpath, 20)
             img_pil = Image.fromarray(result_image)
             draw = ImageDraw.Draw(img_pil)
             # fill = rgb 색상
-            draw.text((50, 100), "화면 안쪽으로 들어와주세요.", font=font, fill=(255, 0, 0, 128))
+
+            # draw.text((50, 100), "화면 안쪽으로 들어와주세요.", font=font, fill=(255, 0, 0, 128))
             result_image = np.array(img_pil)
             font = cv2.FONT_HERSHEY_SIMPLEX
             # cv2.putText(result_image, text, (50,100), font, 1, (255, 0, 0), 2)
@@ -96,7 +97,7 @@ while True:
                 img_pil = Image.fromarray(result_image)
                 draw = ImageDraw.Draw(img_pil)
                 # fill = rgb 색상
-                draw.text((50, 55), "위험! 아이가 혼자 차에 있습니다.", font=font, fill=(0, 0, 255, 128))
+                draw.text((50, 55), "위험! 아이만 차에 있습니다.", font=font, fill=(0, 0, 255, 128))
                 result_image = np.array(img_pil)
 
             elif age_list[age] == '(4 ~ 6)':
@@ -113,7 +114,7 @@ while True:
                 img_pil = Image.fromarray(result_image)
                 draw = ImageDraw.Draw(img_pil)
                 # fill = rgb 색상
-                draw.text((50, 55), "위험! 아이가 혼자 차에 있습니다.", font=font, fill=(0, 0, 255, 128))
+                draw.text((50, 55), "위험! 아이만 차에 있습니다.", font=font, fill=(0, 0, 255, 128))
                 result_image = np.array(img_pil)
 
             else:
@@ -130,6 +131,7 @@ while True:
 
     # Display the resulting image
     #cv2.imshow('Video', frame)
+    result_image = cv2.resize(result_image, (1024, 720))
     cv2.imshow('Video', result_image)
 
     # Hit 'q' on the keyboard to quit!

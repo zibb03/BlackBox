@@ -15,15 +15,18 @@ face_mask_recognition_model = cv2.dnn.readNet(
     'C:/Users/user/Documents/GitHub/blackbox/models/face_mask_recognition.caffemodel'
 )
 
-age_list = ['(0 ~ 2)', '(4 ~ 6)', '(8 ~ 12)', '(15 ~ 20)',
-            '(25 ~ 32)', '(38 ~ 43)', '(48 ~ 53)', '(60 ~ 100)']
+# age_list = ['(0 ~ 2)', '(4 ~ 6)', '(8 ~ 12)', '(15 ~ 20)',
+#             '(25 ~ 32)', '(38 ~ 43)', '(48 ~ 53)', '(60 ~ 100)']
+age_list = ['(0 ~ 2)', '(4 ~ 6)', '(13 ~ 17)', '(18 ~ 25)',
+            '(30 ~ 37)', '(38 ~ 43)', '(48 ~ 53)', '(60 ~ 100)']
+
 colors = [(0, 255, 0), (0, 0, 255)]
 
 face_locations = []
 process_this_frame = True
 
 image_hub = imagezmq.ImageHub()
-sender = imagezmq.ImageSender(connect_to='tcp://192.168.35.144:5555')
+sender = imagezmq.ImageSender(connect_to='tcp://192.168.35.162:5555')
 
 while True:
   rpi_name, frame = image_hub.recv_image()
@@ -38,9 +41,10 @@ while True:
   image_hub.send_reply(b'OK')
   #print(2)
 
+  # Only process every other frame of video to save time
   if process_this_frame:
     # Find all the faces and face encodings in the current frame of video
-    blob = cv2.dnn.blobFromImage(frame, scalefactor=1., size=(300, 300), mean=(104., 177., 123.)
+    blob = cv2.dnn.blobFromImage(frame, scalefactor=1., size=(300, 300), mean=(104., 177., 123.))
     face_mask_recognition_model.setInput(blob)
     face_locations = face_mask_recognition_model.forward()
     # print(face_locations)

@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2a91daa6-5a2e-414b-a3e3-136119c4806d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Socket/Client_Script_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/Client_Script_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Socket/Server_Script_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/Server_Script_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Socket/Server_Script_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Socket/Server_Script_3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/age/age_2-1.py" beforeDir="false" afterPath="$PROJECT_DIR$/age/age_2-1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cctv_raspberrypi-master/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/cctv_raspberrypi-master/server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/anaconda3/envs/BlackBox-env" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Tokyo2020-Pictogram-using-MediaPipe" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.server">
@@ -57,27 +55,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Server_Script_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="blackbox" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Socket" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Socket/Server_Script_2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Server_Script_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="blackbox" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -91,6 +68,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Socket/Server_Script_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="age_2-1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="blackbox" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/age" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/age/age_2-1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,10 +142,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.age_2-1" />
         <item itemvalue="Python.Server_Script_3" />
         <item itemvalue="Python.Client_Script" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.Server_Script_2" />
       </list>
     </recent_temporary>
   </component>
@@ -169,45 +167,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="658" y="152" key="#xdebugger.evaluate/0.0.1920.1040@0.0.1920.1040" timestamp="1625898189272" />
-    <state x="689" y="217" key="FileChooserDialogImpl" timestamp="1628503633490">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2609" y="217" key="FileChooserDialogImpl" timestamp="1631211088214">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="343" y="238" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1627394004355" />
-    <state x="2609" y="217" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1626717948915" />
+    <state x="2609" y="217" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631211088214" />
     <state x="2609" y="222" key="FileChooserDialogImpl/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626195803419" />
     <state x="689" y="217" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1628503633490" />
-    <state width="1893" height="235" key="GridCell.Tab.0.bottom" timestamp="1631210214739">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1893" height="235" key="GridCell.Tab.0.bottom" timestamp="1632468536854">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631139264296" />
-    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631210214739" />
+    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631462887660" />
+    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631211697616" />
     <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1631142193830" />
-    <state width="1893" height="235" key="GridCell.Tab.0.center" timestamp="1631210214738">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1893" height="235" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1632468536854" />
+    <state width="1893" height="235" key="GridCell.Tab.0.center" timestamp="1632468536854">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631139264296" />
-    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631210214738" />
+    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631462887660" />
+    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631211697615" />
     <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.center/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1631142193830" />
-    <state width="1893" height="235" key="GridCell.Tab.0.left" timestamp="1631210214737">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1893" height="235" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1632468536854" />
+    <state width="1893" height="235" key="GridCell.Tab.0.left" timestamp="1632468536854">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631139264296" />
-    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631210214737" />
+    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631462887659" />
+    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631211697615" />
     <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.left/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1631142193830" />
-    <state width="1893" height="235" key="GridCell.Tab.0.right" timestamp="1631210214738">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1893" height="235" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1632468536854" />
+    <state width="1893" height="235" key="GridCell.Tab.0.right" timestamp="1632468536854">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631139264296" />
-    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631210214738" />
+    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1631462887660" />
+    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631211697615" />
     <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272717873" />
     <state width="1893" height="202" key="GridCell.Tab.0.right/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196801589" />
-    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1631142193830" />
+    <state width="1893" height="235" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1632468536854" />
     <state width="1893" height="332" key="GridCell.Tab.1.bottom" timestamp="1625909566237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -228,14 +226,14 @@
     </state>
     <state width="1893" height="332" key="GridCell.Tab.1.right/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1625909566237" />
     <state width="1893" height="332" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1625898576294" />
-    <state x="2546" y="117" key="SettingsEditor" timestamp="1631205671402">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state x="626" y="117" key="SettingsEditor" timestamp="1631753468465">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="444" y="65" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628256019271" />
     <state x="2546" y="117" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1631205671402" />
     <state x="326" y="73" key="SettingsEditor/0.0.1920.1040/1920.5.1920.1040@0.0.1920.1040" timestamp="1626272715718" />
     <state x="2585" y="54" key="SettingsEditor/0.0.1920.1040/1920.5.1920.1040@1920.5.1920.1040" timestamp="1626196288118" />
-    <state x="626" y="117" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1630490026838" />
+    <state x="626" y="117" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1631753468465" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1625898162467">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
